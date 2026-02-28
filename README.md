@@ -80,6 +80,8 @@ Evaluation metrics:
 ---
 
 **Authors: Badamgarav Battushig, Gurpreet Kaur**
+
 **Course: CPSC 5071 – Data Management for Data Science**
+
 **Instructor: Yueting Chen**
 
