@@ -1,8 +1,8 @@
-# Predicting Employee Attrition Using Remote Work Productivity and Workplace Factors 
+# Predicting Employee Attrition Using Remote Work Productivity and Workplace Factors
 
 ## Overview
 
-This project analyzes employee attrition by integrating traditional HR factors with remote productivity metrics. The objective is to evaluate whether productivity-related variables add predictive value beyond workplace factors.
+This project analyzes employee attrition by integrating traditional HR factors with remote productivity metrics. The objective is to evaluate whether productivity-related variables add predictive value beyond workplace factors when predicting employee attrition.
 
 ---
 
@@ -10,7 +10,7 @@ This project analyzes employee attrition by integrating traditional HR factors w
 
 ### Employee Attrition Dataset (Kaggle)
 
-Source: [Employee Attrition and Factors – Kaggle](https://www.kaggle.com/datasets/thedevastator/employee-attrition-and-factors)
+Source: https://www.kaggle.com/datasets/thedevastator/employee-attrition-and-factors
 
 Includes HR variables such as:
 - Attrition (target variable)
@@ -21,10 +21,13 @@ Includes HR variables such as:
 - YearsAtCompany
 - JobLevel
 
+These variables represent workplace conditions and employee characteristics that may influence attrition.
+
+---
 
 ### Remote Worker Productivity Dataset (Kaggle)
 
-Source: [Remote Worker Productivity Dataset – Kaggle](https://www.kaggle.com/datasets/ziya07/remote-worker-productivity-dataset)
+Source: https://www.kaggle.com/datasets/ziya07/remote-worker-productivity-dataset
 
 Includes:
 - productivity_score
@@ -33,6 +36,9 @@ Includes:
 - late_task_ratio
 - focus_time_minutes
 - experience_years
+
+These variables represent productivity and remote work performance.
+
 ---
 
 ## Data Integration
@@ -43,19 +49,21 @@ Productivity metrics were aggregated by `experience_years` and merged with the a
 
 `TotalWorkingYears ↔ experience_years`
 
-A LEFT JOIN was applied to retain all employee records.
+A LEFT JOIN was applied to retain all employee records from the attrition dataset.
 
 ---
 
 ## Key Findings
 
 - Overtime, JobSatisfaction, MonthlyIncome, JobLevel, and YearsAtCompany show strong relationships with attrition.
-- Productivity metrics show weaker direct correlation but may contribute in predictive modeling.
+- Productivity metrics show weaker direct correlations but may still contribute to predictive modeling.
 - The dataset is imbalanced, with more employees staying than leaving.
 
 ---
 
 ## Modeling
+
+Two machine learning models were implemented:
 
 - Logistic Regression (baseline model)
 - Random Forest (comparison model)
@@ -79,9 +87,15 @@ Evaluation metrics:
 
 ---
 
-**Authors: Badamgarav Battushig, Gurpreet Kaur**
+## Authors
 
-**Course: CPSC 5071 – Data Management for Data Science**
+Badamgarav Battushig  
+Gurpreet Kaur
 
-**Instructor: Yueting Chen**
+---
 
+## Course
+
+CPSC 5071 – Data Management for Data Science
+
+Instructor: Yueting Chen
